@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include<set>
+#include <set>
 
 using namespace std;
 
@@ -15,15 +15,20 @@ class Sentence {
 private:
 	string sentences;
 
-	vector <string> splitedSentences;
+	vector <vector<string>> splitedSentences;
 
 	void GetSplitSentences() {
 		string word{ "" };
+		vector<string> splitSentence;
 		for (int i = 0; i < sentences.size(); i++) {
 			char currSymbol = sentences[i];
-			if (currSymbol == ' ' || currSymbol == ',' || currSymbol == '.') {
-				splitedSentences.push_back(word);
+			if (currSymbol == ' ' || currSymbol == ',') {
+				splitSentence.push_back(word);
 				word.clear();
+				continue;
+			}
+			else if (currSymbol == '.') {
+				splitedSentences.push_back(splitSentence);
 				continue;
 			}
 
@@ -37,38 +42,45 @@ public:
 		GetSplitSentences();
 	}
 
-	set<string> GetWords(vector<char>& letters) const {
+	vector<set<string>> GetWords(vector<char>& letters) const {
+		vector<set<string>> resultWords;
 		set<string> choosenWords;
+		for (auto splitSentence : splitedSentences) {
+			for (int i = 0; i < splitSentence.size(); i++) {
+				string currWord = splitSentence[i];
+				for (int k = 0; k < currWord.size(); k++) {
+					char currSymbol = currWord[k];
+					bool isAdded = false;
+					for (char letter : letters) {
+						if (currSymbol == letter) {
+							choosenWords.insert(currWord);
+							isAdded = true;
+							break;
+						}
+					}
 
-		for (int i = 0; i < splitedSentences.size(); i++) {
-			string currWord = splitedSentences[i];
-			for (int k = 0; k < currWord.size(); k++) {
-				char currSymbol = currWord[k];
-				bool isAdded = false;
-				for (char letter : letters) {
-					if (currSymbol == letter) {
-						choosenWords.insert(currWord);
-						isAdded = true;
+					if (isAdded) {
 						break;
 					}
 				}
-
-				if (isAdded) {
-					break;
-				}
 			}
+
+			resultWords.push_back(choosenWords);
 		}
 
-		return choosenWords;
+		return resultWords;
 	}
 
 
 
 };
 
-void printResult(set<string>& results) {
-	for (string word : results) {
-		cout << word << " ";
+void printResult(vector<set<string>>& results) {
+	for (auto sentence : results) {
+		for (string word : sentence) {
+			cout << word << " ";
+		}
+		cout << endl;
 	}
 }
 int main()
@@ -88,6 +100,6 @@ int main()
 		letters.push_back(letter);
 	}
 
-	set<string> result = sentenceClass.GetWords(letters);
+	vector<set<string>> result = sentenceClass.GetWords(letters);
 	printResult(result);
 }
