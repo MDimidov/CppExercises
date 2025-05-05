@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <set>
+#include<set>
 
 using namespace std;
 
@@ -15,20 +15,15 @@ class Sentence {
 private:
 	string sentences;
 
-	vector <vector<string>> splitedSentences;
+	vector <string> splitedSentences;
 
 	void GetSplitSentences() {
 		string word{ "" };
-		vector<string> splitSentence;
 		for (int i = 0; i < sentences.size(); i++) {
 			char currSymbol = sentences[i];
-			if (currSymbol == ' ' || currSymbol == ',') {
-				splitSentence.push_back(word);
+			if (currSymbol == ' ' || currSymbol == ',' || currSymbol == '.') {
+				splitedSentences.push_back(word);
 				word.clear();
-				continue;
-			}
-			else if (currSymbol == '.') {
-				splitedSentences.push_back(splitSentence);
 				continue;
 			}
 
@@ -43,36 +38,42 @@ public:
 	}
 
 	vector<set<string>> GetWords(vector<char>& letters) const {
-		vector<set<string>> resultWords;
 		set<string> choosenWords;
-		for (auto splitSentence : splitedSentences) {
-			for (int i = 0; i < splitSentence.size(); i++) {
-				string currWord = splitSentence[i];
+		vector<set<string>> resultWords;
+
+		for (char letter : letters) {
+			for (int i = 0; i < splitedSentences.size(); i++) {
+				string currWord = splitedSentences[i];
+
 				for (int k = 0; k < currWord.size(); k++) {
 					char currSymbol = currWord[k];
-					bool isAdded = false;
-					for (char letter : letters) {
-						if (currSymbol == letter) {
-							choosenWords.insert(currWord);
-							isAdded = true;
-							break;
-						}
-					}
-
-					if (isAdded) {
+					if (toupper(currSymbol) == toupper(letter)) {
+						choosenWords.insert(currWord);
 						break;
 					}
 				}
-			}
 
+			}
+			resultWords.push_back(choosenWords);
+			choosenWords.clear();
+		}
+
+		bool isEmpty = false;
+		for (auto words : resultWords) {
+			if (words.size() < 0) {
+				isEmpty = true;
+				break;
+			}
+		}
+
+		if (isEmpty) {
+			resultWords.clear();
+			choosenWords.insert("---");
 			resultWords.push_back(choosenWords);
 		}
 
 		return resultWords;
 	}
-
-
-
 };
 
 void printResult(vector<set<string>>& results) {
