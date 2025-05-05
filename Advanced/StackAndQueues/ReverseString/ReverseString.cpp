@@ -2,8 +2,22 @@
 //
 
 #include <iostream>
+#include <stack>
+#include <string>
 
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+    stack<char> inputStack;
+    string input;
+    getline(cin, input);
+
+    for (int i = 0; i < input.size(); i++) {
+        inputStack.push(input[i]);
+    }
+
+    while (!inputStack.empty()) {
+        cout << inputStack.top();
+        inputStack.pop();
+    }
 }
