@@ -39,34 +39,6 @@ vector<int> getInputArr(const string& input) {
 	return nums;
 }
 
-int getMaxElement(stack<int> elements) {
-	int maxElement = INT_MIN;
-
-	while (!elements.empty()) {
-		if (maxElement < elements.top()) {
-			maxElement = elements.top();
-		}
-
-		elements.pop();
-	}
-
-	return maxElement;
-}
-
-int getMinElement(stack<int> elements) {
-	int minElement = INT_MAX;
-
-	while (!elements.empty()) {
-		if (minElement > elements.top()) {
-			minElement = elements.top();
-		}
-
-		elements.pop();
-	}
-
-	return minElement;
-}
-
 void executeCommands(vector<int>& commands, stack<int>& nums, stack<int>& maxStack, stack<int>& minStack) {
 
 	int command1 = commands[0];
