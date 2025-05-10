@@ -67,26 +67,32 @@ int getMinElement(stack<int> elements) {
 	return minElement;
 }
 
-void executeCommands(vector<int>& commands, stack<int>& nums) {
+void executeCommands(vector<int>& commands, stack<int>& nums, stack<int>& maxStack, stack<int>& minStack) {
 
 	int command1 = commands[0];
-
+	
+	int element;
 	switch (command1)
 	{
 	case 1:
-		nums.push(commands[1]);
+		element = commands[1];
+		nums.push(element);
+		if (maxStack.empty() || maxStack.top() <= element) maxStack.push(element);
+		if (minStack.empty() || minStack.top() >= element) minStack.push(element);
 		break;
 	case 2:
-		nums.pop();
+		if (!maxStack.empty() && maxStack.top() == nums.top()) maxStack.pop();
+		if (!minStack.empty() && minStack.top() == nums.top()) minStack.pop();
+		if (!nums.empty()) nums.pop();
 		break;
 	case 3:
-		if (!nums.empty()) {
-			cout << getMaxElement(nums) << endl;
+		if (!nums.empty() && !maxStack.empty()) {
+			cout << maxStack.top() << endl;
 		}
 		break;
 	case 4:
-		if (!nums.empty()) {
-			cout << getMinElement(nums) << endl;
+		if (!nums.empty() && !minStack.empty()) {
+			cout << minStack.top() << endl;
 		}
 		break;
 	}
@@ -111,13 +117,15 @@ int main()
 	cin.ignore();
 
 	stack<int> nums;
+	stack<int> maxStack;
+	stack<int> minStack;
 
 	string line;
 	for (int i = 0; i < n; i++) {
 		getline(cin, line);
 		vector<int> commands = getInputArr(line);
 
-		executeCommands(commands, nums);
+		executeCommands(commands, nums, maxStack, minStack);
 	}
 
 	printElements(nums);
