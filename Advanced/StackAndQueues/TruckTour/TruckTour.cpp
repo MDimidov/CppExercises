@@ -25,19 +25,16 @@ struct Station {
 };
 
 void setStation(string& line, queue<Station>& stations) {
-	vector<int> nums;
-	Station station;
-	int num;
 	istringstream iss(line);
 
-	while (iss >> num) {
-		nums.push_back(num);
+	Station station;
+	int fuel, distance;
+
+	while (iss >> fuel >> distance) {
+		station.fuel = fuel;
+		station.distanceToNextStation = distance;
+		stations.push(station);
 	}
-
-	station.fuel = nums[0];
-	station.distanceToNextStation = nums[1];
-
-	stations.push(station);
 }
 
 
