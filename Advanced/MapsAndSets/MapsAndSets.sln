@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CountSameValuesInArray", "CountSameValuesInArray\CountSameValuesInArray.vcxproj", "{BE1F947E-93E9-46CD-ACC0-B2D4C023EE2E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AverageStudentGrades", "AverageStudentGrades\AverageStudentGrades.vcxproj", "{F517C24C-D220-498D-8BEE-19E74EB7ACA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{BE1F947E-93E9-46CD-ACC0-B2D4C023EE2E}.Release|x64.Build.0 = Release|x64
 		{BE1F947E-93E9-46CD-ACC0-B2D4C023EE2E}.Release|x86.ActiveCfg = Release|Win32
 		{BE1F947E-93E9-46CD-ACC0-B2D4C023EE2E}.Release|x86.Build.0 = Release|Win32
+		{F517C24C-D220-498D-8BEE-19E74EB7ACA9}.Debug|x64.ActiveCfg = Debug|x64
+		{F517C24C-D220-498D-8BEE-19E74EB7ACA9}.Debug|x64.Build.0 = Debug|x64
+		{F517C24C-D220-498D-8BEE-19E74EB7ACA9}.Debug|x86.ActiveCfg = Debug|Win32
+		{F517C24C-D220-498D-8BEE-19E74EB7ACA9}.Debug|x86.Build.0 = Debug|Win32
+		{F517C24C-D220-498D-8BEE-19E74EB7ACA9}.Release|x64.ActiveCfg = Release|x64
+		{F517C24C-D220-498D-8BEE-19E74EB7ACA9}.Release|x64.Build.0 = Release|x64
+		{F517C24C-D220-498D-8BEE-19E74EB7ACA9}.Release|x86.ActiveCfg = Release|Win32
+		{F517C24C-D220-498D-8BEE-19E74EB7ACA9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
