@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SetsOfElements", "SetsOfEle
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EvenTimes", "EvenTimes\EvenTimes.vcxproj", "{22D60688-754A-4B74-B14B-67931B30E1F7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CountRealNumbers", "CountRealNumbers\CountRealNumbers.vcxproj", "{A02267A1-000F-4B0A-BDDA-5C86F9998BDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{22D60688-754A-4B74-B14B-67931B30E1F7}.Release|x64.Build.0 = Release|x64
 		{22D60688-754A-4B74-B14B-67931B30E1F7}.Release|x86.ActiveCfg = Release|Win32
 		{22D60688-754A-4B74-B14B-67931B30E1F7}.Release|x86.Build.0 = Release|Win32
+		{A02267A1-000F-4B0A-BDDA-5C86F9998BDA}.Debug|x64.ActiveCfg = Debug|x64
+		{A02267A1-000F-4B0A-BDDA-5C86F9998BDA}.Debug|x64.Build.0 = Debug|x64
+		{A02267A1-000F-4B0A-BDDA-5C86F9998BDA}.Debug|x86.ActiveCfg = Debug|Win32
+		{A02267A1-000F-4B0A-BDDA-5C86F9998BDA}.Debug|x86.Build.0 = Debug|Win32
+		{A02267A1-000F-4B0A-BDDA-5C86F9998BDA}.Release|x64.ActiveCfg = Release|x64
+		{A02267A1-000F-4B0A-BDDA-5C86F9998BDA}.Release|x64.Build.0 = Release|x64
+		{A02267A1-000F-4B0A-BDDA-5C86F9998BDA}.Release|x86.ActiveCfg = Release|Win32
+		{A02267A1-000F-4B0A-BDDA-5C86F9998BDA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
