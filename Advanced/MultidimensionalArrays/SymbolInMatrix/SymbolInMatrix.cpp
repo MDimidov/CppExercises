@@ -26,9 +26,14 @@ int main()
 	// Create array and fill values
 	for (int i = 0; i < n; i++) {
 		cin >> line;
-		arr[i] = new char[n];
-		for (int j = 0; j < line.size(); j++) {
-			arr[i][j] = line[j];
+		arr[i] = new char[n + 1];
+		for (int j = 0; j < n; j++) {
+			if (i == n) {
+				arr[i][j] = '\0';
+			}
+			else {
+				arr[i][j] = line[j];
+			}
 		}
 	}
 
