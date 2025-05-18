@@ -22,7 +22,7 @@ char** createArray(int rows, int cols) {
 	return arr;
 }
 
-void fillArrayFromConsoleAndGetAllUniqueSymbols(char**& arr, int rows, int cols) {
+void fillArrayFromConsole(char**& arr, int rows, int cols) {
 	char symbol;
 	for (int row = 0; row < rows; row++) {
 		for (int col = 0; col < cols; col++) {
@@ -70,7 +70,7 @@ int main()
 
 	char** arr = createArray(rows, cols);
 
-	fillArrayFromConsoleAndGetAllUniqueSymbols(arr, rows, cols);
+	fillArrayFromConsole(arr, rows, cols);
 
 	int equalMatrix = getEqualsMatrix(arr, rows, cols);
 
