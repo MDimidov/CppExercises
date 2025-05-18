@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DiagonalDifference", "Diago
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CompareMatrices", "CompareMatrices\CompareMatrices.vcxproj", "{39571F91-246B-4821-AED0-94595AE24572}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PositionsOf", "PositionsOf\PositionsOf.vcxproj", "{7E92EAF6-DC97-4EF2-AFFF-116C03CD3264}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{39571F91-246B-4821-AED0-94595AE24572}.Release|x64.Build.0 = Release|x64
 		{39571F91-246B-4821-AED0-94595AE24572}.Release|x86.ActiveCfg = Release|Win32
 		{39571F91-246B-4821-AED0-94595AE24572}.Release|x86.Build.0 = Release|Win32
+		{7E92EAF6-DC97-4EF2-AFFF-116C03CD3264}.Debug|x64.ActiveCfg = Debug|x64
+		{7E92EAF6-DC97-4EF2-AFFF-116C03CD3264}.Debug|x64.Build.0 = Debug|x64
+		{7E92EAF6-DC97-4EF2-AFFF-116C03CD3264}.Debug|x86.ActiveCfg = Debug|Win32
+		{7E92EAF6-DC97-4EF2-AFFF-116C03CD3264}.Debug|x86.Build.0 = Debug|Win32
+		{7E92EAF6-DC97-4EF2-AFFF-116C03CD3264}.Release|x64.ActiveCfg = Release|x64
+		{7E92EAF6-DC97-4EF2-AFFF-116C03CD3264}.Release|x64.Build.0 = Release|x64
+		{7E92EAF6-DC97-4EF2-AFFF-116C03CD3264}.Release|x86.ActiveCfg = Release|Win32
+		{7E92EAF6-DC97-4EF2-AFFF-116C03CD3264}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
