@@ -51,6 +51,14 @@ void printArray(char**& arr, int rows, int cols) {
 	}
 }
 
+void deleteArray(char**& arr, int rows) {
+	for (int row = 0; row < rows; row++) {
+		delete[] arr[row];
+	}
+
+	delete[] arr;
+}
+
 int main()
 {
 	int rows, cols;
@@ -65,4 +73,5 @@ int main()
 
 	printArray(arr, rows, cols);
 
+	deleteArray(arr, rows);
 }

@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SquaresInMatrix", "SquaresI
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SnakeMoves", "SnakeMoves\SnakeMoves.vcxproj", "{67D5D25D-3800-4B86-BDD3-C7AB0E0D2879}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaximalSum", "MaximalSum\MaximalSum.vcxproj", "{5DC14CE4-532C-4B88-B6D6-A4A0ABC893CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{67D5D25D-3800-4B86-BDD3-C7AB0E0D2879}.Release|x64.Build.0 = Release|x64
 		{67D5D25D-3800-4B86-BDD3-C7AB0E0D2879}.Release|x86.ActiveCfg = Release|Win32
 		{67D5D25D-3800-4B86-BDD3-C7AB0E0D2879}.Release|x86.Build.0 = Release|Win32
+		{5DC14CE4-532C-4B88-B6D6-A4A0ABC893CD}.Debug|x64.ActiveCfg = Debug|x64
+		{5DC14CE4-532C-4B88-B6D6-A4A0ABC893CD}.Debug|x64.Build.0 = Debug|x64
+		{5DC14CE4-532C-4B88-B6D6-A4A0ABC893CD}.Debug|x86.ActiveCfg = Debug|Win32
+		{5DC14CE4-532C-4B88-B6D6-A4A0ABC893CD}.Debug|x86.Build.0 = Debug|Win32
+		{5DC14CE4-532C-4B88-B6D6-A4A0ABC893CD}.Release|x64.ActiveCfg = Release|x64
+		{5DC14CE4-532C-4B88-B6D6-A4A0ABC893CD}.Release|x64.Build.0 = Release|x64
+		{5DC14CE4-532C-4B88-B6D6-A4A0ABC893CD}.Release|x86.ActiveCfg = Release|Win32
+		{5DC14CE4-532C-4B88-B6D6-A4A0ABC893CD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
