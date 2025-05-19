@@ -11,8 +11,8 @@ using namespace std;
 
 string getLowerString(string& line) {
 	string result = "";
-	for (int i = 0; i < line.size(); i++) {
-		result += tolower(line[i]);
+	for (char* p = &line[0]; *p != '\0'; ++p) {
+		result += tolower(*p);
 	}
 
 	return result;
@@ -20,8 +20,8 @@ string getLowerString(string& line) {
 
 string getUpperString(string& line) {
 	string result = "";
-	for (int i = 0; i < line.size(); i++) {
-		result += toupper(line[i]);
+	for (char* p = &line[0]; *p != '\0'; ++p) {
+		result += toupper(*p);
 	}
 
 	return result;
