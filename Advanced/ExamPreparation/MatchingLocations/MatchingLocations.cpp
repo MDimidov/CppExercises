@@ -14,24 +14,40 @@
 
 using namespace std;
 
-void addLocation(string& line, map<string, vector<string>>& locations, vector<string>& locationNames, char delimeter) {
+struct Location {
+	string name;
+	string lat;
+	string lon;
+
+	void printLocation() {
+		cout << name << "," << lat << "," << lon << endl;
+	}
+};
+
+void addLocation(string& line, vector<Location>& locations, char delimeter) {
 	istringstream iss(line);
 	string token;
-	string locationName;
+	Location location;
 
 	int index = 0;
 	while (getline(iss, token, delimeter)) {
-		if (index++ == 0) {
-			locationName = token;
-			locationNames.push_back(locationName);
+		if (index == 0) {
+			location.name = token;
+		}
+		else if (index == 1) {
+			location.lat = token;
 		}
 		else {
-			locations[locationName].push_back(token);
+			location.lon = token;
 		}
+
+		index++;
 	}
+
+	locations.push_back(location);
 }
 
-void printLocations(string& line, map<string, vector<string>>& locations, vector<string>& locationNames) {
+void printLocations(string& line, vector<Location>& locations) {
 	istringstream iss(line);
 	string location;
 	vector<string> searchingLocations;
@@ -39,49 +55,41 @@ void printLocations(string& line, map<string, vector<string>>& locations, vector
 		searchingLocations.push_back(location);
 	}
 
-	vector<string> result;
-	string currResult;
 	if (searchingLocations.size() > 1) {
 		string lat = searchingLocations[0];
 		string lon = searchingLocations[1];
 
-		for (auto& name : locationNames) {
-			if (locations[name][0] == lat && locations[name][1] == lon) {
-				currResult = name + "," + lat + "," + lon;
-				result.push_back(currResult);
+		for (auto& loc : locations) {
+			if (loc.lat == lat && loc.lon == lon) {
+				loc.printLocation();
 			}
 		}
 	}
 	else {
-		currResult = location;
-		for (auto& psn : locations[location]) {
-			currResult += "," + psn;
+		for (auto& loc : locations) {
+			if (loc.name == location) {
+				loc.printLocation();
+			}
 		}
-		result.push_back(currResult);
-	}
-
-	for (auto& res : result) {
-		cout << res << endl;
 	}
 }
 
 int main()
 {
-	map<string, vector<string>> locations;
-	vector<string> locationNames;
+	vector<Location> locations;
 
 	string line;
 	getline(cin, line);
 
 	while (line != ".") {
-		addLocation(line, locations, locationNames, ',');
+		addLocation(line, locations, ',');
 
 		getline(cin, line);
 	}
 
 	getline(cin, line);
 	while (line != ".") {
-		printLocations(line, locations, locationNames);
+		printLocations(line, locations);
 
 		getline(cin, line);
 	}
