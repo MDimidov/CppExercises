@@ -24,19 +24,15 @@ void fillArrayFromConsole(char(&arr)[10][11]) {
 }
 
 void multiplyRustPsn(char(&arr)[10][11], int row, int col, char(&newRustArr)[10][11]) {
-	for (int r = row - 1 >= 0 ? row - 1 : 0;
-		r < (row + 2 < 10 ? row + 2 : 10);
-		r++) {
-		if (arr[r][col] == '.') {
-			newRustArr[r][col] = '!';
-		}
-	}
+	int dRow[] = { -1, 1, 0, 0 };
+	int dCol[] = { 0, 0, -1, 1 };
 
-	for (int c = col - 1 >= 0 ? col - 1 : 0;
-		c < (col + 2 < 10 ? col + 2 : 10);
-		c++) {
-		if (arr[row][c] == '.') {
-			newRustArr[row][c] = '!';
+	for (int d = 0; d < 4; d++) {
+		int r = row + dRow[d];
+		int c = col + dCol[d];
+
+		if (r >= 0 && r < 10 && c >= 0 && c < 10 && arr[r][c] == '.') {
+			newRustArr[r][c] = '!';
 		}
 	}
 }
