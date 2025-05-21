@@ -16,10 +16,71 @@
 
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
+struct Product {
+	string name{ "" };
+	double price{ 0 };
+	int quantity{ 0 };
+	double finalPrice{ 0 };
+
+	void setFinalPrice() {
+		finalPrice = price * quantity;
+	}
+
+	void printItem() {
+		cout << name << " " << finalPrice << endl;
+	}
+};
+
+void fillProductsFromConsole(vector<Product>& products) {
+	int totalItems;
+	cin >> totalItems;
+
+	for (int i = 0; i < totalItems; i++) {
+		Product product;
+
+		cin >> product.name;
+		cin >> product.price;
+		cin >> product.quantity;
+
+		product.setFinalPrice();
+
+		products.push_back(product);
+	}
+}
+
+bool compareByFinalPrice(const Product& a, const Product& b)
+{
+	return a.finalPrice < b.finalPrice;
+}
+
+double getTotalSum(vector<Product>& products) {
+	double totalSum = 0;
+	for (auto& product : products) {
+		totalSum += product.finalPrice;
+	}
+
+	return totalSum;
+}
+
+void printItems(vector<Product>& products) {
+	cout << "The total sum is: " << getTotalSum(products) << " lv." << endl;
+
+	for (auto& product : products) {
+		product.printItem();
+	}
+}
 int main()
 {
+	vector<Product> products;
 
+	fillProductsFromConsole(products);
+
+	sort(products.rbegin(), products.rend(), compareByFinalPrice);
+
+	printItems(products);
 }
