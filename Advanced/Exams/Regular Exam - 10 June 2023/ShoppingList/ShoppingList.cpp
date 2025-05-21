@@ -58,7 +58,7 @@ bool compareByFinalPrice(const Product& a, const Product& b)
 	return a.finalPrice < b.finalPrice;
 }
 
-double getTotalSum(vector<Product>& products) {
+double getTotalSum(const vector<Product>& products) {
 	double totalSum = 0;
 	for (auto& product : products) {
 		totalSum += product.finalPrice;
