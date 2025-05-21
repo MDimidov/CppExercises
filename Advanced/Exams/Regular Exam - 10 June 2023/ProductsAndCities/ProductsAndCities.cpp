@@ -9,10 +9,29 @@
 
 
 #include <iostream>
+#include <map>
 
 using namespace std;
 
 int main()
 {
+	map<string, int> cities;
 
+	int n;
+	cin >> n;
+	cin.ignore();
+
+	string cityName;
+	int price;
+	int quantity;
+
+	while (cin >> cityName >> price >> quantity) {
+		//if (cities.size() < n || cities.count(cityName)) {
+			cities[cityName] += price * quantity;
+		//}
+	}
+
+	for (auto& kvp : cities) {
+		cout << kvp.first << " " << kvp.second << endl;
+	}
 }
