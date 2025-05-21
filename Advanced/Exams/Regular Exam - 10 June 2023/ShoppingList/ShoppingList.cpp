@@ -80,7 +80,7 @@ int main()
 
 	fillProductsFromConsole(products);
 
-	sort(products.rbegin(), products.rend(), compareByFinalPrice);
+	stable_sort(products.rbegin(), products.rend(), compareByFinalPrice);
 
 	printItems(products);
 }
