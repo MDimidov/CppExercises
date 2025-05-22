@@ -15,20 +15,20 @@ using namespace std;
 
 int main()
 {
-	map<string, int> cities;
+	map<string, double> cities;
 
 	int n;
 	cin >> n;
 	cin.ignore();
 
 	string cityName;
-	int price;
+	double price;
 	int quantity;
 
 	while (cin >> cityName >> price >> quantity) {
-		//if (cities.size() < n || cities.count(cityName)) {
+		if (cities.size() < n || cities.count(cityName)) {
 			cities[cityName] += price * quantity;
-		//}
+		}
 	}
 
 	for (auto& kvp : cities) {
