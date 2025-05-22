@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36119.2 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SchoolAdministrator", "SchoolAdministrator\SchoolAdministrator.vcxproj", "{F2295A4B-B961-450A-9E65-8431F27EA13A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fishes", "Fishes\Fishes.vcxproj", "{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{F2295A4B-B961-450A-9E65-8431F27EA13A}.Release|x64.Build.0 = Release|x64
 		{F2295A4B-B961-450A-9E65-8431F27EA13A}.Release|x86.ActiveCfg = Release|Win32
 		{F2295A4B-B961-450A-9E65-8431F27EA13A}.Release|x86.Build.0 = Release|Win32
+		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Debug|x64.ActiveCfg = Debug|x64
+		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Debug|x64.Build.0 = Debug|x64
+		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Debug|x86.ActiveCfg = Debug|Win32
+		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Debug|x86.Build.0 = Debug|Win32
+		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Release|x64.ActiveCfg = Release|x64
+		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Release|x64.Build.0 = Release|x64
+		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Release|x86.ActiveCfg = Release|Win32
+		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
