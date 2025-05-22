@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SchoolAdministrator", "Scho
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fishes", "Fishes\Fishes.vcxproj", "{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CashJoint", "CashJoint\CashJoint.vcxproj", "{3A499F24-7308-4620-AC7D-3E7DE4477909}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Release|x64.Build.0 = Release|x64
 		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Release|x86.ActiveCfg = Release|Win32
 		{6E2D8D3D-E004-4AD0-A9EB-FE2467F863F2}.Release|x86.Build.0 = Release|Win32
+		{3A499F24-7308-4620-AC7D-3E7DE4477909}.Debug|x64.ActiveCfg = Debug|x64
+		{3A499F24-7308-4620-AC7D-3E7DE4477909}.Debug|x64.Build.0 = Debug|x64
+		{3A499F24-7308-4620-AC7D-3E7DE4477909}.Debug|x86.ActiveCfg = Debug|Win32
+		{3A499F24-7308-4620-AC7D-3E7DE4477909}.Debug|x86.Build.0 = Debug|Win32
+		{3A499F24-7308-4620-AC7D-3E7DE4477909}.Release|x64.ActiveCfg = Release|x64
+		{3A499F24-7308-4620-AC7D-3E7DE4477909}.Release|x64.Build.0 = Release|x64
+		{3A499F24-7308-4620-AC7D-3E7DE4477909}.Release|x86.ActiveCfg = Release|Win32
+		{3A499F24-7308-4620-AC7D-3E7DE4477909}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
