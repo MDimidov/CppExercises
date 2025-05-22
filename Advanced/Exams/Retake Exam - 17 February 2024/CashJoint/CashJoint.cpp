@@ -69,10 +69,87 @@
 //	in the source currency when you exchange or subtract.
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
+struct Account {
+	Account(string _currency, double _ammount) {
+		ammount = _ammount;
+		currency = _currency;
+	}
+
+	Account() {
+		currency = "";
+		ammount = 0.0;
+	}
+
+	double ammount;
+	string currency;
+
+	void printAccount() {
+		cout << currency << ": " << fixed << setprecision(2) << ammount << endl;
+	}
+};
+
+vector<Account>::iterator getAccountByCurrency(vector<Account>& bank, string& currency) {
+	return find_if(bank.begin(), bank.end(),
+		[&](const Account& acc) {
+			return acc.currency == currency;
+		});
+}
+
+void operateWithAccounts(vector<Account>& bank) {
+	string currency, command;
+	double value;
+
+	while ((cin >> command) && command != "END" && command != "E") {
+		if (command == "P") {
+			for (auto& account : bank) {
+				account.printAccount();
+			}
+		}
+		else {
+			cin >> currency >> value;
+			auto it = getAccountByCurrency(bank, currency);
+
+				if (it == bank.end()) {
+					continue;
+				}
+
+			if (command == "+") {
+				it->ammount += value;
+			}
+			else if (command == "-") {
+				it->ammount -= value;
+			}
+			else if (command == "X") {
+				it->ammount -= value;
+
+				double course;
+				cin >> currency >> course;
+
+				auto it2 = getAccountByCurrency(bank, currency);
+
+				it2->ammount += value * course;
+			}
+		}
+	}
+}
+
 int main()
 {
+	vector<Account> bank;
 
+	string currency;
+	double value;
+	while ((cin >> currency) && currency != "END") {
+		cin >> value;
+		Account account(currency, value);
+		bank.push_back(account);
+	}
+
+	operateWithAccounts(bank);
 }
