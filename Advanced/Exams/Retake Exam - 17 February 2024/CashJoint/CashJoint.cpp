@@ -77,8 +77,8 @@ using namespace std;
 
 struct Account {
 	Account(string _currency, double _ammount) {
-		ammount = _ammount;
-		currency = _currency;
+		this->ammount = _ammount;
+		this->currency = _currency;
 	}
 
 	Account() {
