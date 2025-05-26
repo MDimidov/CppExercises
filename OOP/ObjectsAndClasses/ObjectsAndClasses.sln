@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Letters", "Letters\Letters.vcxproj", "{93D32D80-50DF-465C-921F-AF4032272CCB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SentenceShifter", "SentenceShifter\SentenceShifter.vcxproj", "{E4DCB2DE-4DF1-4684-B7B0-DBF1A94A2C35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{93D32D80-50DF-465C-921F-AF4032272CCB}.Release|x64.Build.0 = Release|x64
 		{93D32D80-50DF-465C-921F-AF4032272CCB}.Release|x86.ActiveCfg = Release|Win32
 		{93D32D80-50DF-465C-921F-AF4032272CCB}.Release|x86.Build.0 = Release|Win32
+		{E4DCB2DE-4DF1-4684-B7B0-DBF1A94A2C35}.Debug|x64.ActiveCfg = Debug|x64
+		{E4DCB2DE-4DF1-4684-B7B0-DBF1A94A2C35}.Debug|x64.Build.0 = Debug|x64
+		{E4DCB2DE-4DF1-4684-B7B0-DBF1A94A2C35}.Debug|x86.ActiveCfg = Debug|Win32
+		{E4DCB2DE-4DF1-4684-B7B0-DBF1A94A2C35}.Debug|x86.Build.0 = Debug|Win32
+		{E4DCB2DE-4DF1-4684-B7B0-DBF1A94A2C35}.Release|x64.ActiveCfg = Release|x64
+		{E4DCB2DE-4DF1-4684-B7B0-DBF1A94A2C35}.Release|x64.Build.0 = Release|x64
+		{E4DCB2DE-4DF1-4684-B7B0-DBF1A94A2C35}.Release|x86.ActiveCfg = Release|Win32
+		{E4DCB2DE-4DF1-4684-B7B0-DBF1A94A2C35}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
