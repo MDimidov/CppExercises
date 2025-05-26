@@ -14,19 +14,23 @@ using namespace std;
 
 class Sale {
 public:
-	string town;
-	string product;
-	double totalPrice{ 0 };
 
 	Sale(string town, string product, double price, int quantity)
-		: town(town), product(product), price(price), quantity(quantity) {
-		totalPrice += price * quantity;
+		: town(town), product(product), price(price), quantity(quantity) {}
+
+	double getTotalPrice() {
+		return price * quantity;
+	}
+
+	string getTown() {
+		return town;
 	}
 
 private:
+	string town;
+	string product;
 	double price;
 	int quantity;
-
 };
 
 void addSale(map<string, vector<Sale>>& sales, string& line) {
@@ -59,7 +63,7 @@ int main()
 		double sum = 0;
 
 		for (auto& sale : kvp.second) {
-			sum += sale.totalPrice;
+			sum += sale.getTotalPrice();
 		}
 
 		cout << kvp.first << " -> " << fixed << setprecision(2) << sum << endl;
