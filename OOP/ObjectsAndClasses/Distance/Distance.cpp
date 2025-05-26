@@ -9,34 +9,30 @@
 
 using namespace std;
 
-class Points {
+class Point {
 private:
-	int m_p1;
-	int m_p2;
-
-	int m_q1;
-	int m_q2;
+	int m_x;
+	int m_y;
 
 public:
-	Points(int p1, int p2, int q1, int q2) {
-		m_p1 = p1;
-		m_p2 = p2;
-		m_q1 = q1;
-		m_q2 = q2;
-	}
+	Point(int x, int y) : m_x(x), m_y(y) {}
 
-	double getDistanceBetweenPoints() {
-		return sqrt(pow(abs(m_q1 - m_p1), 2) + pow(abs(m_q2 - m_p2), 2));
+	double getDistanceToGivenPoint(const Point& other) const {
+		int dx = m_x - other.m_x;
+		int dy = m_y - other.m_y;
+
+		return sqrt(pow(dx, 2) + pow(dy, 2));
 	}
 };
 
 int main()
 {
-	int p1, p2, q1, q2;
+	int x1, y1, x2, y2;
 
-	cin >> p1 >> p2 >> q1 >> q2;
+	cin >> x1 >> y1 >> x2 >> y2;
 
-	Points points(p1, p2, q1, q2);
+	Point point1(x1, y1);
+	Point point2(x2, y2);
 
-	cout <<	fixed << setprecision(3) << points.getDistanceBetweenPoints();
+	cout << fixed << setprecision(3) << point1.getDistanceToGivenPoint(point2);
 }
