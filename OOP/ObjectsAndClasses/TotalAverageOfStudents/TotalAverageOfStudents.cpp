@@ -31,19 +31,34 @@ private:
 	double totalAverage;
 
 public:
-	Student(string name, string surname, double totalAverage) 
-		: name(name), surname(surname), totalAverage(totalAverage) {}
-	
-	void printStudent() {
+	Student(string name, string surname, double totalAverage)
+		: name(name), surname(surname), totalAverage(totalAverage) {
+	}
+
+	void print() const {
 		cout << name << " " << surname << " " << totalAverage << endl;
 	}
 
-	double getTotalAvg() {
+	double getTotalAvg() const {
 		return totalAverage;
 	}
 
 };
 
+double getTotalAverage(vector<Student>& students) {
+	if (students.empty()) {
+		return -1;
+	}
+
+	double avg = 0;
+
+	for (auto& student : students) {
+		avg += student.getTotalAvg();
+		student.print();
+	}
+
+	return avg / students.size();
+}
 int main()
 {
 	vector<Student> students;
@@ -51,27 +66,20 @@ int main()
 	int n;
 	cin >> n;
 
+	if (n <= 0) {
+		cout << "Invalid input";
+		return 0;
+	}
+
 	for (int i = 0; i < n; i++) {
 		string name, surname;
 		double grade;
 
 		cin >> name >> surname >> grade;
 
-		students.push_back(Student(name, surname, grade));
+		students.emplace_back(name, surname, grade);
 	}
 
-	if (students.empty()) {
-		cout << "Invalid input";
-	}
-	else {
-		double avg = 0;
-
-		for (auto& student : students) {
-			avg += student.getTotalAvg();
-			student.printStudent();
-		}
-
-		avg /= students.size();
-		cout << avg;
-	}
+	double avg = getTotalAverage(students);
+	cout << avg;
 }
