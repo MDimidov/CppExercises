@@ -5,7 +5,7 @@
 using namespace std;
 
 // Function that call Print of all Getters
-void PrintInfo( const Car& objCar )
+void PrintInfo( const Car &objCar )
 {
     cout << "Brand -> " << objCar.GetBrand() << endl;
 
