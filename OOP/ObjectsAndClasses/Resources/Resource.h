@@ -31,20 +31,8 @@ namespace SoftUni {
 
 		Resource() {}
 
-		int getId() const {
-			return this->id;
-		}
-
 		ResourceType getType() const {
 			return this->type;
-		}
-
-		string getUrl() const {
-			return this->url;
-		}
-
-		void setId(int id) {
-			this->id = id;
 		}
 
 		void setType(ResourceType type) {
@@ -63,33 +51,25 @@ namespace SoftUni {
 			}
 		}
 
-		void setUrl(string& url) {
-			this->url = url;
-		}
-
 		bool operator<(const Resource& other) const {
 			return this->id < other.id;
 		}
+
+		friend Resource& operator>>(istream& is, Resource& r) {
+			string type;
+			is >> r.id >> type >> r.url;
+
+			r.setType(type);
+
+			return r;
+		}
+
+		friend ostream& operator<<(ostream& os, const Resource& r) {
+			os << r.id << " " << r.type << " " << r.url;
+
+			return os;
+		}
 	};
-
-	Resource& operator>>(istream& is, Resource& r) {
-		int id;
-		string type;
-		string url;
-		is >> id >> type >> url;
-
-		r.setId(id);
-		r.setType(type);
-		r.setUrl(url);
-
-		return r;
-	}
-
-	ostream& operator<<(ostream& os, const Resource& r) {
-		os << r.getId() << " " << r.getType() << " " << r.getUrl();
-
-		return os;
-	}
 }
 
 #endif // !RESOURCE_H 
