@@ -24,12 +24,10 @@ namespace SoftUni {
 		ResourceType type;
 		string url;
 	public:
+		Resource() {}
 
 		Resource(int id, ResourceType type, string url)
-			: id(id), type(type), url(url) {
-		}
-
-		Resource() {}
+			: id(id), type(type), url(url) {}
 
 		ResourceType getType() const {
 			return this->type;
@@ -59,13 +57,13 @@ namespace SoftUni {
 			return this->id < other.id;
 		}
 
-		friend Resource& operator>>(istream& is, Resource& r) {
+		friend istream& operator>>(istream& is, Resource& r) {
 			string type;
 			is >> r.id >> type >> r.url;
 
 			r.setType(type);
 
-			return r;
+			return is;
 		}
 
 		friend ostream& operator<<(ostream& os, const Resource& r) {
