@@ -1,7 +1,3 @@
-#pragma once
-#ifndef ARTICLE_13_FILTER_CPP
-#define ARTICLE_13_FILTER_CPP
-
 #include "Article13Filter.h"
 
 Article13Filter::Article13Filter(std::set<std::string> copyrighted)
@@ -24,6 +20,3 @@ bool Article13Filter::isCopyrighted(const std::string s) {
 std::vector<std::string> Article13Filter::getBlocked() {
 	return this->blocked;
 }
-
-#endif // !ARTICLE_13_FILTER_H
-
