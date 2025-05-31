@@ -18,12 +18,12 @@
     <ClCompile Include="CensorshipMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Article13Filter.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Article13Filter.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Article13.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>

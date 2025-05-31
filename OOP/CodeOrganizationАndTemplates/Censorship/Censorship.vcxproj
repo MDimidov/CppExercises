@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Article13Filter.cpp" />
     <ClCompile Include="CensorshipMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Article13.h" />
     <ClInclude Include="Article13Filter.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
