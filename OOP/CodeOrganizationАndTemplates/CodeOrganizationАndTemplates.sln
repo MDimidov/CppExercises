@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Censorship", "Censorship\Ce
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Parser", "Parser\Parser.vcxproj", "{A177C050-F0C2-408B-B557-03194DF92CAB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SplitAndJoin", "SplitAndJoin\SplitAndJoin.vcxproj", "{9BE117A6-A6A8-46DB-AB48-7A8522D3638E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{A177C050-F0C2-408B-B557-03194DF92CAB}.Release|x64.Build.0 = Release|x64
 		{A177C050-F0C2-408B-B557-03194DF92CAB}.Release|x86.ActiveCfg = Release|Win32
 		{A177C050-F0C2-408B-B557-03194DF92CAB}.Release|x86.Build.0 = Release|Win32
+		{9BE117A6-A6A8-46DB-AB48-7A8522D3638E}.Debug|x64.ActiveCfg = Debug|x64
+		{9BE117A6-A6A8-46DB-AB48-7A8522D3638E}.Debug|x64.Build.0 = Debug|x64
+		{9BE117A6-A6A8-46DB-AB48-7A8522D3638E}.Debug|x86.ActiveCfg = Debug|Win32
+		{9BE117A6-A6A8-46DB-AB48-7A8522D3638E}.Debug|x86.Build.0 = Debug|Win32
+		{9BE117A6-A6A8-46DB-AB48-7A8522D3638E}.Release|x64.ActiveCfg = Release|x64
+		{9BE117A6-A6A8-46DB-AB48-7A8522D3638E}.Release|x64.Build.0 = Release|x64
+		{9BE117A6-A6A8-46DB-AB48-7A8522D3638E}.Release|x86.ActiveCfg = Release|Win32
+		{9BE117A6-A6A8-46DB-AB48-7A8522D3638E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
