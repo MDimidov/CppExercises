@@ -10,7 +10,14 @@
 
 using namespace std;
 
-
+template <typename T>
+void setCurrToVector(string& curr, vector<T>& vec) {
+	istringstream iss(curr);
+	T value;
+	iss >> value;
+	vec.push_back(value);
+	curr.clear();
+}
 
 template <typename T>
 vector<T> split(const string& line, const char separator) {
@@ -19,21 +26,15 @@ vector<T> split(const string& line, const char separator) {
 
 	for (auto& ch : line) {
 		if (ch == separator) {
-			istringstream iss(curr);
-			T value;
-			iss >> value;
-			result.push_back(value);
-			curr.clear();
+			setCurrToVector(curr, result);
 		}
 		else {
 			curr += ch;
 		}
 	}
 
-	istringstream iss(curr);
-	T value;
-	iss >> value;
-	result.push_back(value);
+	setCurrToVector(curr, result);
+
 	return result;
 }
 
