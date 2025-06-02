@@ -3,20 +3,26 @@
 #ifndef SPLIT_H
 #define SPLIT_H
 
+#include <iostream>
 #include <vector>
 #include <string>
 #include <sstream>
 
 using namespace std;
 
+
+
 template <typename T>
-vector<T> split(const string& line, const char delimiter) {
+vector<T> split(const string& line, const char separator) {
 	vector<T> result;
 	string curr;
 
-	for (char& ch : line) {
-		if (ch == delimeter) {
-			result.push_back(T(curr));
+	for (auto& ch : line) {
+		if (ch == separator) {
+			istringstream iss(curr);
+			T value;
+			iss >> value;
+			result.push_back(value);
 			curr.clear();
 		}
 		else {
@@ -24,7 +30,10 @@ vector<T> split(const string& line, const char delimiter) {
 		}
 	}
 
-	result.push_back(T(curr));
+	istringstream iss(curr);
+	T value;
+	iss >> value;
+	result.push_back(value);
 	return result;
 }
 
