@@ -3,12 +3,19 @@
 #define PRINT_UTILS_H
 
 #include <iostream>
-#include <vector>
+#include <iterator>
+#include <set>
 
-template <typename T>
-void printVector(vector<T>& vec) {
-	for (T& element : vec) {
-		cout << element << " ";
+using namespace std;
+
+template <typename Container>
+void printContainer(typename Container::const_iterator begin, typename Container::const_iterator end) {
+	for (auto it = begin; it != end; it++) {
+		if (it != begin) {
+			cout << " ";
+		}
+		cout << *it;
 	}
 }
+
 #endif // !define PRINT_UTILS_H
