@@ -22,6 +22,9 @@
     <ClCompile Include="SortingMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Comparators.h" />
+    <ClInclude Include="Parser.h" />
+    <ClInclude Include="PrintUtils.h" />
     <ClInclude Include="Song.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
