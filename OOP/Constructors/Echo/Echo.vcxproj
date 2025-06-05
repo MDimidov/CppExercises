@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ContactManagerUI.cpp" />
+    <ClCompile Include="Echo.cpp" />
     <ClCompile Include="EchoMain.cpp" />
     <ClCompile Include="EmailContact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContactManagerUI.h" />
+    <ClInclude Include="Echo.h" />
     <ClInclude Include="EmailContact.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

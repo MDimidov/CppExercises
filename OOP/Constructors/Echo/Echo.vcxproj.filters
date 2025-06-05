@@ -24,12 +24,18 @@
     <ClCompile Include="EmailContact.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="Echo.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContactManagerUI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EmailContact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Echo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
