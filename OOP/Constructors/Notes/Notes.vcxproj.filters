@@ -23,5 +23,8 @@
     <ClInclude Include="NoteName.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SolfegeNoteNaming.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
