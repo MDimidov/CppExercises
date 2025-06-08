@@ -19,17 +19,19 @@
 #include "Company.h"
 #include "ProfitCalculator.h"
 #include <sstream>
-#include <algorithm>
 
-using namespace std;
 
-string getProfitReport(Company*& fromInclusive, Company*& toInclusive, map<int, ProfitCalculator>& profitCalculatorsByCompany) {
-	string result;
-	for (auto& it = fromInclusive; it <= toInclusive; it++) {
-		result += it->getName() + " = " + to_string(profitCalculatorsByCompany[it->getId()].calculateProfit(*it)) + "\n";
+std::string getProfitReport(Company*& fromInclusive, Company*& toInclusive, std::map<int, ProfitCalculator>& profitCalculatorsByCompany) {
+	 std::ostringstream out;
+
+	for (Company* it = fromInclusive; it <= toInclusive; it++) {
+		int id = it->getId();
+		const ProfitCalculator& calculator = profitCalculatorsByCompany[id];
+		int profit = calculator.calculateProfit(*it);
+		out << it->getName() << " = " << profit << std::endl;
 	}
 
-	return result;
+	return out.str();
 }
 
 #endif // !PROFIT_REPORT_H
