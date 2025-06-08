@@ -7,6 +7,7 @@
 //Make sure there are no memory leaks.
 
 #include "Register.h"
+#include <cassert>
 
 Register::Register(size_t numCompanies)
 {
@@ -24,6 +25,8 @@ Company Register::get(int companyId) const {
 			return companiesArray[i];
 		}
 	}
+
+	assert(false && "Company ID not found in Register");
 
 	return Company();
 }
