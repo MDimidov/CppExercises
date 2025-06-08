@@ -24,6 +24,7 @@
   <ItemGroup>
     <ClInclude Include="Company.h" />
     <ClInclude Include="ProfitCalculator.h" />
+    <ClInclude Include="ProfitReport.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
