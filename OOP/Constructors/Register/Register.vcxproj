@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Register.cpp" />
     <ClCompile Include="RegisterMain.cpp" />
   </ItemGroup>
   <ItemGroup>
