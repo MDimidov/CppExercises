@@ -18,7 +18,8 @@ using namespace std;
 
 bool tryParse(const string& str, int& num) {
 	stringstream ss(str);
-	if (ss >> num) {
+	char extra;
+	if ((ss >> num) && !(ss >> extra)) {
 		return true;
 	}
 
