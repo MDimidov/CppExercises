@@ -20,7 +20,7 @@ public:
 	Word(const std::string& strWord)
 		: strWord(strWord)
 	{
-		wordCounts[strWord]++;
+		this->wordCounts[strWord]++;
 	}
 
 	std::string getWord() const {
@@ -28,15 +28,13 @@ public:
 	}
 
 	int getCount() const {
-		return wordCounts[strWord];
+		int result = this->wordCounts[strWord];
+		wordCounts.erase(strWord);
+		return result;
 	}
 
 	bool operator<(const Word& w) const{
 		return this->getWord() < w.getWord();
-	}
-
-	static void clearCounts() {
-		wordCounts.clear();
 	}
 };
 
