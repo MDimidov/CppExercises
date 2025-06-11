@@ -9,16 +9,18 @@
 #define WORD_H
 
 #include <iostream>
+#include <map>
 
 class Word {
 private:
+	static std::map<std::string, int> wordCounts;
 	std::string strWord;
-	int totalWords{ 0 };
+
 public:
 	Word(const std::string& strWord)
 		: strWord(strWord)
 	{
-		totalWords++;
+		wordCounts[strWord]++;
 	}
 
 	std::string getWord() const {
@@ -26,8 +28,18 @@ public:
 	}
 
 	int getCount() const {
-		return this->totalWords;
+		return wordCounts[strWord];
+	}
+
+	bool operator<(const Word& w) const{
+		return this->getWord() < w.getWord();
+	}
+
+	static void clearCounts() {
+		wordCounts.clear();
 	}
 };
+
+std::map<std::string, int> Word::wordCounts;
 
 #endif // !WORD_H
