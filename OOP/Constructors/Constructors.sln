@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Words", "Words\Words.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DivisibleBy45", "DivisibleBy45\DivisibleBy45.vcxproj", "{AF1B15AE-F7EE-46C4-956E-513CABDB8946}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sequences", "Sequences\Sequences.vcxproj", "{F09CCB94-2C3E-4224-BE55-C03C77E52277}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{AF1B15AE-F7EE-46C4-956E-513CABDB8946}.Release|x64.Build.0 = Release|x64
 		{AF1B15AE-F7EE-46C4-956E-513CABDB8946}.Release|x86.ActiveCfg = Release|Win32
 		{AF1B15AE-F7EE-46C4-956E-513CABDB8946}.Release|x86.Build.0 = Release|Win32
+		{F09CCB94-2C3E-4224-BE55-C03C77E52277}.Debug|x64.ActiveCfg = Debug|x64
+		{F09CCB94-2C3E-4224-BE55-C03C77E52277}.Debug|x64.Build.0 = Debug|x64
+		{F09CCB94-2C3E-4224-BE55-C03C77E52277}.Debug|x86.ActiveCfg = Debug|Win32
+		{F09CCB94-2C3E-4224-BE55-C03C77E52277}.Debug|x86.Build.0 = Debug|Win32
+		{F09CCB94-2C3E-4224-BE55-C03C77E52277}.Release|x64.ActiveCfg = Release|x64
+		{F09CCB94-2C3E-4224-BE55-C03C77E52277}.Release|x64.Build.0 = Release|x64
+		{F09CCB94-2C3E-4224-BE55-C03C77E52277}.Release|x86.ActiveCfg = Release|Win32
+		{F09CCB94-2C3E-4224-BE55-C03C77E52277}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
